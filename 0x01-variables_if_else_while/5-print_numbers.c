@@ -11,7 +11,7 @@ int main(void)
 
 	while (c <= 9)
 	{
-		printf("%d",c);
+		printf("%d", c);
 		c++;
 	}
 	putchar('\n');
