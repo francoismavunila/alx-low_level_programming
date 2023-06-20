@@ -8,8 +8,8 @@
 
 int main(void)
 {
-	char characters[8]="_putchar";
-    	int i=0;
+	char characters[8] = "_putchar";
+    	int i = 0;
     	for(i=0;i<=7;i++)
     	{
         	_putchar(characters[i]);
