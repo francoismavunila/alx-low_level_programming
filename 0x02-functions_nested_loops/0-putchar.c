@@ -6,7 +6,7 @@
  * Return:0
  */
 
-char characters[9]="_putchar";
+char characters[8]="_putchar";
 
 int main(void)
 {
