@@ -6,23 +6,28 @@
  * Return:0 or 1
  */
 
-void print_numbers(void)
+
+void more_numbers(void)
 {
-    char c = 0;
-    int i=0;
-    while(i<10)
-    {
-        while (c <= 14)
-        {
-            _putchar('0' + c);
-            c++;
+    char n, c;
+	int i = 0;
 
-        }
-        i++;
-        _putchar('\n');
-    }
 
-	_putchar('\n');
+	while (i < 10)
+	{
+		for (n = 0; n <= 14; n++)
+		{
+			c = n;
+			if (n > 9)
+			{
+				_putchar('1');
+				c = n % 10;
+			}
 
+			_putchar('0' + c);
+		}
+
+		_putchar('\n');
+		i++;
+	}
 }
-
