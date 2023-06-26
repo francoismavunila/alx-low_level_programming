@@ -17,9 +17,10 @@ void rev_string(char *s)
         
         temp = *s;
         *s = *(s-length);
+        s--;
         *(s-length) = temp;
         length=length-2;
-        s=s-1;
+       
     }
 
     _putchar('\n');
