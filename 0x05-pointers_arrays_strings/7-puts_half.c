@@ -21,6 +21,7 @@ void puts_half(char *str)
     while (length>=0)
     {
          _putchar(*(str-length));
+	 length--;
     }
     
 }
