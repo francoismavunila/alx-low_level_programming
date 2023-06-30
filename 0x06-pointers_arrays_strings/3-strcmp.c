@@ -13,8 +13,8 @@ int _strcmp(char *s1, char *s2)
             {
                 return difference;
             }
-            *s1++;
-            *s2++;
+            s1++;
+            s2++;
         }
         if(*s2 == '\0')
         {
