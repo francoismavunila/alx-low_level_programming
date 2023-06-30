@@ -1,29 +1,31 @@
 #include "main.h"
+
 /**
- * pointers and arrays
+ * @brief 
  * 
+ * @param s 
+ * @return char* 
  */
 
-char *string_toupper(char *a)
+char *leet(char *s)
 {
-    char *str_ptr;
-    str_ptr = a;
-    while(*a != '\0')
-    {
-        if((*a==97) || (*a==65))
-        {
-            *a = 52;
-        }else if((*a==97) || (*a==65)){
-            *a = 51;
-        }
-        else if((*a==111) || (*a==79)){
-            *a = 48;
-        }else if((*a==116) || (*a==84)){
-            *a = 55;
-        }else if((*a==108) || (*a==76)){
-            *a = 49;
-        }
-        a++;
-    }
-    return str_ptr;
+	int i, ii;
+	char s1[] = "aeotl";
+	char S1[] = "AEOTL";
+	char s2[] = "43071";
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		for (ii = 0; ii < 5; ii++)
+		{
+			if (s[i] == s1[ii] || s[i] == S1[ii])
+			{
+				s[i] = s2[ii];
+				break;
+			}
+		}
+	}
+	return (s);
 }
+
+
