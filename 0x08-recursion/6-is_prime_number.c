@@ -5,7 +5,7 @@
  */
 int prime_check(int n, int i) {
     if (i == n) {
-        return -1;
+        return 1;
     }
 
     if (n % i == 0) {
