@@ -3,6 +3,7 @@
  * pointers and arrays
  * 
  */
+int sqr(int x, int y);
 int _sqrt_recursion(int n)
 {
 	return (sqr(n, 1));
