@@ -6,7 +6,7 @@
  */
 int main(int argc, char *argv[])
 {
-    int length = 1;
+    int length = 0;
     while(length<argc)
     {
         printf("%s\n",argv[length]);
