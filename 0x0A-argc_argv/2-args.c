@@ -7,9 +7,10 @@
 int main(int argc, char *argv[])
 {
     int length = 1;
-    while(length<argc-1)
+    while(length<argc)
     {
         printf("%s\n",argv[length]);
+	length++;
     }
 	return (0);
 }
