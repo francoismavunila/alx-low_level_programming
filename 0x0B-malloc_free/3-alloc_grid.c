@@ -1,17 +1,21 @@
 #include <stdlib.h>
 
 int** alloc_grid(int width, int height) {
+    int i;
+    int j;
+    int** grid = malloc(height * sizeof(int*));
     if (width <= 0 || height <= 0) {
         return NULL;
     }
 
-    int** grid = malloc(height * sizeof(int*));
+    
     if (grid == NULL) {
         return NULL;
     }
 
-    int i, j;
+    
     for (i = 0; i < height; i++) {
+        
         grid[i] = malloc(width * sizeof(int));
         if (grid[i] == NULL) {
             for (j = 0; j < i; j++) {
