@@ -6,7 +6,8 @@
  * 
  */
 int i;
-char* create_array_of_chars(size, char c) {
+char *create_array(unsigned int size, char c)
+{
     char* arr = malloc(size * sizeof(char));  
     if (arr == NULL) {
         return NULL;
