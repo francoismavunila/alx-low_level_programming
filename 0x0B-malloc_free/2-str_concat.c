@@ -1,18 +1,23 @@
 #include "main.h"
 #include <unistd.h>
+#include <stdlib.h>
 
 char* str_concat(char* s1, char* s2) {
+    int len1 = 0;
+    int len2 = 0;
+    int i = 0;
+    int j = 0;
     if (s1 == NULL) {
         s1 = "";
     }
     if (s2 == NULL) {
         s2 = "";
     }
-    int len1 = 0;
+    
     while (s1[len1] != '\0') {
         len1++;
     }
-    int len2 = 0;
+    
     while (s2[len2] != '\0') {
         len2++;
     }
@@ -20,13 +25,13 @@ char* str_concat(char* s1, char* s2) {
     if (result == NULL) {
         return NULL;
     }
-    int i = 0;
+    
     while (i < len1) {
         _putchar(s1[i]);
         result[i] = s1[i];
         i++;
     }
-    int j = 0;
+    
     while (j < len2) {
         _putchar(s2[j]);
         result[i+j] = s2[j];
