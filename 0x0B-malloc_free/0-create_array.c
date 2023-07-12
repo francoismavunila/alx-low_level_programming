@@ -5,7 +5,8 @@
  * pointers and arrays
  * 
  */
-char* create_array_of_chars(int size, char c) {
+int i;
+char* create_array_of_chars(size, char c) {
     char* arr = malloc(size * sizeof(char));  
     if (arr == NULL) {
         return NULL;
