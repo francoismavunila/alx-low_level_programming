@@ -5,14 +5,14 @@
  * pointers and arrays
  * 
  */
-int i;
 char *create_array(unsigned int size, char c)
 {
     char* arr = malloc(size * sizeof(char));  
     if (arr == NULL) {
         return NULL;
     }
-    for (int i = 0; i < size; i++) {
+    int i;
+    for (i = 0; i < size; i++) {
         arr[i] = c; 
     }
     return arr;  
