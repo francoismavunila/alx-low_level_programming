@@ -9,10 +9,11 @@
 void *malloc_checked(unsigned int b)
 {
     char *status = malloc(b);
-    if(status == "NULL")
+    if(status == NULL)
     {
         exit(EXIT_FAILURE);
-    }else{
+    }else
+    {
         return status;
     }
 }
