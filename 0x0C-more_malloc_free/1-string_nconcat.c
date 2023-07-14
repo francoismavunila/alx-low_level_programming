@@ -1,37 +1,44 @@
-#include <stdlib.h>
-#include <stdio.h>
+#include "main.h"
 
-char *string_nconcat(char *s1, char *s2, unsigned int n) {
-    size_t s1_len = 0;
-    size_t s2_len = 0;
-    size_t i;
-    char *result;
-    if (s1 == NULL) {
-        s1 = ""; // treat NULL as an empty string
-    }
-    
-    while (s1[s1_len] != '\0') {
-        s1_len++;
-    }
-    
-    while (s2[s2_len] != '\0') {
-        s2_len++;
-    }
-    if (n >= s2_len) {
-        n = s2_len; // use entire s2 if n >= s2_len
-    }
-    result = malloc(s1_len + n + 1); // allocate memory for result
-    if (result == NULL) {
-        printf("Error: malloc failed.\n");
-        exit(EXIT_FAILURE); // exit if malloc fails
-    }
-    
-    for (i = 0; i < s1_len; i++) {
-        result[i] = s1[i]; // copy s1 into result
-    }
-    for (i = 0; i < n; i++) {
-        result[s1_len + i] = s2[i]; // copy first n bytes of s2 into result
-    }
-    result[s1_len + n] = '\0'; // null-terminate result
-    return result;
+/**
+*string_nconcat - Concatenates two strings using at
+*most an inputted number of bytes.
+*@s1: The first string.
+*@s2: The second string.
+*@n: The maximum number of bytes of s2 to concatenate to s1.
+*
+*Return: If the function fails - NULL.
+*Otherwise - a pointer to the concatenated space in memory.
+*/
+
+char *string_nconcat(char *s1, char *s2, unsigned int n)
+{
+	char *concat;
+	unsigned int len = n, index;
+
+	if (s1 == NULL)
+		s1 = "";
+
+	if (s2 == NULL)
+		s2 = "";
+
+	for (index = 0; s1[index]; index++)
+		len++;
+
+	concat = malloc(sizeof(char) * (len + 1));
+
+	if (concat == NULL)
+		return (NULL);
+
+	len = 0;
+
+	for (index = 0; s1[index]; index++)
+		concat[len++] = s1[index];
+
+	for (index = 0; s2[index] && index < n; index++)
+		concat[len++] = s2[index];
+
+	concat[len] = '\0';
+
+	return (concat);
 }
