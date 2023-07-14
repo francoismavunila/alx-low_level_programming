@@ -1,11 +1,11 @@
 #include <stdlib.h>
-#include <string.h>
+#include <stdio.h>
 
 char *string_nconcat(char *s1, char *s2, unsigned int n) {
     size_t s1_len = 0;
     size_t s2_len = 0;
-    char *result;
     size_t i;
+    char *result;
     if (s1 == NULL) {
         s1 = ""; // treat NULL as an empty string
     }
@@ -22,6 +22,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n) {
     }
     result = malloc(s1_len + n + 1); // allocate memory for result
     if (result == NULL) {
+        printf("Error: malloc failed.\n");
         exit(EXIT_FAILURE); // exit if malloc fails
     }
     
