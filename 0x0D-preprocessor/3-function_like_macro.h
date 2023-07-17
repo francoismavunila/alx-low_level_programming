@@ -1,5 +1,5 @@
-#ifndef FILE_ABS
-#define FILE_ABS
+#ifndef ABS
+#define ABS
 
 #define ABS(X) ((X) < 0 ? -1 * (X) : (X))
 
