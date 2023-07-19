@@ -6,8 +6,8 @@
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
         int count;
-        count = 0;
-        for(count;count<size;count++)
+        
+        for(count=0;count<size;count++)
         {
            (*action)(array[count]);
         }
