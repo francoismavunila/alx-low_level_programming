@@ -5,9 +5,10 @@
 */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-        int count = 0;
+        int count;
+        count = 0;
         for(count;count<size;count++)
         {
-            action(array[count]);
+           (*action)(array[count]);
         }
 }
