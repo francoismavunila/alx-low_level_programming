@@ -9,16 +9,15 @@
  {
     unsigned int count;
     int total;
-    total = 0;
     va_list args;
-    va_start(args, count);
+    total = 0;
+    va_start(args, n);
     if(n == 0)
     {
         return(0);
     }
-    for (count=0; count < n; count++)
+    for (count = 0; count < n; count++)
     {
-        int arg = va_arg(args, int);
         total += va_arg(args,int);
     }
     va_end(args);
