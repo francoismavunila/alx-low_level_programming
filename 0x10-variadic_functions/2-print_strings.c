@@ -12,7 +12,7 @@
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
         unsigned int count;
-        int number;
+        char* number;
         va_list args;
         va_start(args,n);
         for(count=0; count<n; count++)
@@ -23,10 +23,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
                 printf("(nil)");
             }
             else{
-                printf("%d", number);
+                printf("%s", number);
             }
             
-            if((*separator != "NULL") & (count<n-1))
+            if((separator != NULL) & (count<n-1))
             {
                 printf("%s", separator);
             }
