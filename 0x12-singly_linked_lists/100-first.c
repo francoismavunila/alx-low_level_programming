@@ -2,7 +2,7 @@
 
 void fun(void) __attribute__ ((constructor));
 /**
- * 
+ *
  * Return: the number of nodes
  *
  * Return: the number of nodes printed
