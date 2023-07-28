@@ -4,7 +4,7 @@
 /**
  * comment here
  */
-int getWords(char *z)
+int getWords(char *y)
 {
 	int num;
 	int x;
@@ -13,9 +13,9 @@ int getWords(char *z)
 	num = 0;
 	z = 0;
 
-	for (x = 0; z[x] != '\0'; x++)
+	for (x = 0; y[x] != '\0'; x++)
 	{
-		if (z[x] == ' ')
+		if (y[x] == ' ')
 			num = 0;
 		else if (num == 0)
 		{
