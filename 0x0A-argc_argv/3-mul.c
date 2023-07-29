@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
 		int value1 = atoi(argv[1]);
 		int value2 = atoi(argv[2]);
 		int result = value1 * value2;
+
 		printf("%d\n", result);
 
 	}
