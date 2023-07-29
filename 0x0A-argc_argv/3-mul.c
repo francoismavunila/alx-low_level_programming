@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
 		int value2 = atoi(argv[2]);
 		int result = value1 * value2;
 		printf("%d\n", result);
+
 	}
 	else
 	{
