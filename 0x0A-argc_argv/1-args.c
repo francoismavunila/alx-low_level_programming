@@ -2,7 +2,7 @@
 #include "main.h"
 /**
  * pointers and arrays
- * 
+ *
  */
 int main(int argc, char *argv[])
 {
