@@ -1,19 +1,19 @@
 #include "main.h"
 
 /**
- * _realloc - reallocation of memory using malloc and free
- * @ptr: pointer
- * @old_size: this is the old size
- * @new_size: represents new size
- * Return: the functions retuerns a pointer
+ * _realloc -  reallocation of memory
+ * @ptr: pointer to memory
+ * @old_size: the previous size
+ * @new_size: the current size
+ * Return: the function returns a pointer
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	char *value, *val2;
+	char *fke, *rlo;
 	unsigned int i;
 
 	if (ptr != NULL)
-	value = ptr;
+	fke = ptr;
 	else
 	{ return (malloc(new_size)); }
 	if (new_size == old_size)
@@ -21,15 +21,15 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	if (new_size == 0 && ptr != NULL)
 	{ free(ptr);
 	return (0); }
-	val2 = malloc(new_size);
-	if (val2 == NULL)
+	rlo = malloc(new_size);
+	if (rlo == NULL)
 	return (0);
 	for (i = 0; i < (old_size || i < new_size); i++)
 	{
-		*(val2 + i) = value[i];
+		*(rlo + i) = fke[i];
 	}
 	free(ptr);
-return (val2);
+return (rlo);
 }
 
 
