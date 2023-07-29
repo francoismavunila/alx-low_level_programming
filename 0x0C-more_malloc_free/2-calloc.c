@@ -3,8 +3,8 @@
 #include <stdlib.h>
 
 /**
- * pointers and arrays
- * 
+ *pointers and arrays
+ *
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
@@ -15,13 +15,13 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	blk = malloc(nmemb * size);
 	if (blk != NULL)
-    {
+	{
 		for (i = 0; i < (nmemb * size); i++)
 			blk[i] = 0;
 		return (blk);
 	}
 	else
-    {
+	{
 		return (NULL);
-    }
+	}
 }
