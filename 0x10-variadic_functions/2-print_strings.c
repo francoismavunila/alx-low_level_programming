@@ -3,33 +3,34 @@
 #include <stdio.h>
 
 /**
- * sum_them_all - function that returns the sum of all its parameters
- * @n: number of parameters passed to the function
+ * print_strings - Prints a variable number of strings to the console
  *
- * Return: sum of all parameters
+ * @separator: The string to be printed between each string
+ * @n: The number of strings to be printed
+ * @...: The variable arguments containing the strings to be printed
  */
-
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-        unsigned int count;
-        char* number;
-        va_list args;
-        va_start(args,n);
-        for(count=0; count<n; count++)
-        {
-            number = va_arg(args, char *);
-            if (number == NULL)
-            {
-                printf("(nil)");
-            }
-            else{
-                printf("%s", number);
-            }
-            
-            if((separator != NULL) & (count<n-1))
-            {
-                printf("%s", separator);
-            }
-        }
-        printf("\n");
+	unsigned int count;
+	char *number;
+	va_list args;
+
+	va_start(args, n);
+	for (count = 0; count < n; count++)
+	{
+		number = va_arg(args, char *);
+		if (number == NULL)
+		{
+			printf("(nil)");
+		}
+		else
+		{
+			printf("%s", number);
+		}
+		if ((separator != NULL) & (count < n - 1))
+		{
+			printf("%s", separator);
+		}
+	}
+	printf("\n");
 }
