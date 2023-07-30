@@ -1,10 +1,10 @@
-#ifndef FILE
-#define FILE
+#ifndef FILE_CALC
+#define FILE_CALC
 
 /**
- * struct op - this is a structure names op
- * @op: this is an operator variable
- * @f: this is a function
+ * struct op - Structure op
+ * @op: operator
+ * @f: function
  */
 
 typedef struct op
