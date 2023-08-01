@@ -4,10 +4,12 @@
 /**
  * delete_nodeint_at_index - function for that prints the nodes
  * @index: the index
+ * @head: this is the initial pointer
  * Return: the node
  */
 
-int delete_nodeint_at_index(listint_t **head, unsigned int index) {
+int delete_nodeint_at_index(listint_t **head, unsigned int index)
+{
 	listint_t *ptr, *bck;
 	unsigned int i;
 
@@ -18,31 +20,31 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index) {
 	if (index == 0)
 	{
 		ptr = *head;
-        *head = (*head)->next;
-        free(ptr);
-        return (1);
-    }
+		*head = (*head)->next;
+		free(ptr);
+		return (1);
+	}
 
-    bck = NULL;
-    ptr = *head;
-    for (i = 0; i < index; i++) {
-        if (ptr == NULL)
-        {
-            return (-1);
-        }
-            
-        bck = ptr;
-        ptr = ptr->next;
-    }
+	bck = NULL;
+	ptr = *head;
+	for (i = 0; i < index; i++)
+	{
+		if (ptr == NULL)
+		{
+			return (-1);
+		}
 
-    if (ptr == NULL)
-    {
-        return (-1);
-    }
-        
+		bck = ptr;
+		ptr = ptr->next;
+	}
 
-    bck->next = ptr->next;
-    free(ptr);
+	if (ptr == NULL)
+	{
+		return (-1);
+	}
 
-    return (1);
+	bck->next = ptr->next;
+	free(ptr);
+
+	return (1);
 }
