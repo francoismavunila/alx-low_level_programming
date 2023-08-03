@@ -28,7 +28,7 @@ unsigned int binary_to_uint(const char *b)
         }
         else
         {
-            return 0;  // Return 0 if a non-binary character is encountered
+            return 0;
         }
         count++;
     }
