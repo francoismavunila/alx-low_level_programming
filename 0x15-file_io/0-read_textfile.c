@@ -15,7 +15,7 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int filedescriptor = open(filename, O_RDONLY);
+    int filedescriptor = open(filename, O_RDONLY);
     char *buffer = (char *)malloc(letters);
     ssize_t total_bytes_read = 0;
     ssize_t remaining_bytes = letters;
@@ -44,7 +44,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
         if (bytes_read == -1) {
             if (errno == EINTR) {
-                continue;  // Retry if interrupted
+                continue;  
             }
             else {
                 close(filedescriptor);
@@ -53,7 +53,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
             }
         }
         else if (bytes_read == 0) {
-            break;  // End of file reached
+            break;  
         }
 
         total_bytes_read += bytes_read;
